@@ -1,9 +1,6 @@
 package app.bidar.tiptime
 
-import android.annotation.SuppressLint
-import android.graphics.Paint
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -75,14 +72,16 @@ fun TipTimeScreen() {
 
 @Composable
 fun EditNumberField(
+    label: Int,
     value: String,
-    onValueChange: (String) -> Unit
+    onValueChange: (String) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     TextField(
-        label = {Text(stringResource(id = R.string.cost_of_service))},
+        label = {Text(stringResource(id = R.string.bill_amount))},
         value = value,
         onValueChange = onValueChange,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         singleLine = true,
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
     )
