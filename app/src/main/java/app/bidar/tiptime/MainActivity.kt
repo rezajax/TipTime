@@ -170,7 +170,7 @@ fun RoundTheTipRow(
 }
 
 
-private fun calculateTip(
+fun calculateTip(
     amount: Double,
     tipPercent: Double = 15.0,
     roundUp: Boolean
@@ -183,6 +183,7 @@ private fun calculateTip(
 
 
 @Preview(showBackground = true)
+@Preview
 @Composable
 fun DefaultPreview() {
     TipTimeTheme {
